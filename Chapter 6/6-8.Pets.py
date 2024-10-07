@@ -14,6 +14,6 @@ pets.append(pet)
 
 # Display information about each pet
 for pet in pets:
-    print("\nHere's what I know  about " + pet["name"].title() + ":")
+    print(f"\nHere's what I know  about {pet['name'].title()}:")
     for key, value in pet.items():
-        print("\t" + key + ": " + str(value))
+        print(f"\t{key}: {value}")
