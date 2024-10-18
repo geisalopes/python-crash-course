@@ -1,8 +1,8 @@
 class User:
-    """Creating a simple class to store informations about users"""
+    """Represent a simple profile"""
 
     def __init__(self, first_name, last_name, age, location, hobby):
-        """Giving name and last name attributes."""
+        """Initialize the user."""
         self.first = first_name
         self.last = last_name
         self.username = self.first + " " + self.last
@@ -11,13 +11,14 @@ class User:
         self.hobby = hobby
 
     def describe_user(self):
-        """Creating a summary of the user's information"""
+        """Display a summary of the user's information."""
+        print(f"\nHere is the informations about the user {self.username}:")
         print(
-            f"Here is the informations about the user {self.username}: {self.age} years old, from {self.location}, favorite hobby: {self.hobby}"
+            f"Age: {self.age} years old, Location: {self.location}, Hobby: {self.hobby}"
         )
 
     def greet_user(self):
-        print(f"Hello, {self.username}! Wellcome on board!\n")
+        print(f"\nHello, {self.username}! Welcome on board!\n")
 
 
 user_one = User("Geisa", "Lopes", 40, "Berlin", "drawing")

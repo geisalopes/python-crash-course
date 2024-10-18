@@ -1,5 +1,5 @@
 class Restaurant:
-    """Creating a simple restaurant"""
+    """A class representing restaurant"""
 
     def __init__(self, restaurant_name, cuisine_type):
         """Describing the restaurant"""
