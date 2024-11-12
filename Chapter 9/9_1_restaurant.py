@@ -1,22 +1,20 @@
 class Restaurant:
-    """A class representing restaurant"""
+    """A simple description of a restaurant"""
 
-    def __init__(self, restaurant_name, cuisine_type):
-        """Initialize the restaurant"""
-        self.restaurant = restaurant_name.title()
-        self.cuisine = cuisine_type
+    def __init__(self, name, cuisine):
+        """Initialize name and type attributes"""
+        self.name = name.title()
+        self.cuisine = cuisine.title()
 
     def describe_restaurant(self):
-        """Display a summary of the restaurant"""
-        print(
-            f"The cuisine type of the restaurant {self.restaurant} is {self.cuisine}."
-        )
+        print(f"\nThe {self.name} is specialized in {self.cuisine} food.")
 
     def open_restaurant(self):
-        """Display a message that the restaurant is open."""
-        print(f"The restaurant {self.restaurant} is open!")
+        print(f"\nThe {self.name} is open. Welcome!")
 
 
-new_restaurant = Restaurant("chai umy", "asian fusion")
-new_restaurant.describe_restaurant()
-new_restaurant.open_restaurant()
+restaurant = Restaurant("chay umi", "thai")
+print(restaurant.name)
+print(restaurant.cuisine)
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
