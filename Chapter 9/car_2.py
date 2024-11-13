@@ -1,8 +1,8 @@
 class Car:
-    """A simple attempt to represent a car."""
+    """A simple attempt to represent a car"""
 
     def __init__(self, make, model, year):
-        """Initialize attributes ti describe a car."""
+        """Initialize attributes to describe a car"""
         self.make = make
         self.model = model
         self.year = year
@@ -14,8 +14,8 @@ class Car:
         return long_name.title()
 
     def read_odometer(self):
-        """Print a statement showing the car's mileage."""
-        print(f"This car has {self.odometer_reading} miles on it")
+        """Print a statement showing the car's mileage"""
+        print(f"This car has {self.odometer_reading} miles on it.")
 
 
 my_new_car = Car("audi", "a4", 2024)
