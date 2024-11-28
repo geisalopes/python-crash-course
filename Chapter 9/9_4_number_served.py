@@ -13,20 +13,22 @@ class Restaurant:
     def open_restaurant(self):
         print(f"\nThe {self.name} is open. Welcome!")
 
-    def set_number_served(self, guests):
-        """Define the number of guests served"""
-        self.number_served = guests
-        print(f"The number of served guests is {self.number_served}.")
+    def set_number_served(self, customers):
+        self.number_served = customers
 
-    def increment_number_served(self, number):
-        self.number_served += number
-        print(f"Update number of served guests: {self.number_served}")
+    def increment_number_served(self, increment):
+        self.number_served += increment
 
 
 restaurant = Restaurant("chay umi", "thai")
 restaurant.describe_restaurant()
-restaurant.number_served = 50
 
-restaurant.set_number_served(100)
+print(f"\nNumber served: {restaurant.number_served}")
+restaurant.number_served = 500
+print(f"Number served: {restaurant.number_served}")
 
-restaurant.increment_number_served(50)
+restaurant.set_number_served(1000)
+print(f"Number served: {restaurant.number_served}")
+
+restaurant.increment_number_served(250)
+print(f"Number served: {restaurant.number_served}")
