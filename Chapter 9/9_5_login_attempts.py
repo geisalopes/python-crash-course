@@ -1,45 +1,44 @@
 class User:
-    """Represent a simple profile"""
+    """Represent a simple user profile."""
 
-    def __init__(self, first_name, last_name, age, location, hobby):
+    def __init__(self, first_name, last_name, username, email, location):
         """Initialize the user."""
-        self.first = first_name
-        self.last = last_name
-        self.username = self.first + " " + self.last
-        self.age = age
-        self.location = location
-        self.hobby = hobby
+        self.first_name = first_name.title()
+        self.last_name = last_name.title()
+        self.username = username
+        self.email = email
+        self.location = location.title()
         self.login_attempts = 0
 
     def describe_user(self):
         """Display a summary of the user's information."""
-        print(f"\nHere is the informations about the user {self.username}:")
-        print(
-            f"Age: {self.age} years old, Location: {self.location}, Hobby: {self.hobby}"
-        )
+        print(f"\n{self.first_name} {self.last_name}")
+        print(f"  Username: {self.username}")
+        print(f"  Email: {self.email}")
+        print(f"  Location: {self.location}")
 
     def greet_user(self):
-        print(f"\nHello, {self.username}! Welcome on board!\n")
+        """Display a personalized greeting to the user."""
+        print(f"\nWelcome back, {self.username}!")
 
     def increment_login_attempts(self):
-        """Increment the value of login attempts by 1"""
         self.login_attempts += 1
 
     def reset_login_attempts(self):
-        """Reset the value of login attempts to 0"""
         self.login_attempts = 0
 
 
-user_one = User("Geisa", "Lopes", 40, "Berlin", "drawing")
-user_one.describe_user()
-user_one.greet_user()
+geisa = User("geisa", "lopes", "g_lopes", "g_lopes@example.com", "berlin")
+geisa.describe_user()
+geisa.greet_user()
 
-print("\nMaking 3 login attempts...")
-user_one.increment_login_attempts()
-user_one.increment_login_attempts()
-user_one.increment_login_attempts()
-print(f"  Login attempts: {user_one.login_attempts}")
+print(f"Login attemmpts... ")
+geisa.increment_login_attempts()
+geisa.increment_login_attempts()
+geisa.increment_login_attempts()
+geisa.increment_login_attempts()
+print(f"Total of login attempts: {geisa.login_attempts}")
 
-print("Reseting login attempts...")
-user_one.reset_login_attempts()
-print(f"   Login attempts: {user_one.login_attempts}")
+print("\nResetting Login Attempts...")
+geisa.reset_login_attempts()
+print(f"Total of login attempts: {geisa.login_attempts}")
