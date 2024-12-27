@@ -23,12 +23,12 @@ class Plant:
 class CarnivorousPlant(Plant):
     """Represent aspects of a plant, specific to carnivorous plants."""
 
-    def __init__(self, name, species, water_needed, food_type):
+    def __init__(self, name, species, water_needed):
         """
         Initialize attributes of the parent class and new attributes for carnivorous plants.
         """
         super().__init__(name, species, water_needed)
-        self.food_type = food_type  # The type of food the carnivorous plant consumes (e.g., insects, flies)
+        self.food_type = "insects"  # The type of food the carnivorous plant consumes
 
     def describe_feeding(self):
         """Print a statement describing how the plant gets its nutrients."""
@@ -36,7 +36,7 @@ class CarnivorousPlant(Plant):
 
 
 # Criando uma planta carnívora
-venus_flytrap = CarnivorousPlant("Venus Flytrap", "Dionaea Muscipula", 0.5, "insects")
+venus_flytrap = CarnivorousPlant("Venus Flytrap", "Dionaea Muscipula", 0.5)
 
 # Exibindo as informações sobre a planta
 print(venus_flytrap.get_plant_info())
