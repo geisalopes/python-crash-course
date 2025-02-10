@@ -18,5 +18,4 @@ snape_wand = MagicWand("Snape's Wand", "Oak", "Black Phoenix Feather", 0)
 snape_wand.describe_wand()
 
 snape_wand.power_level = 300
-snape_wand.core_material = "Dragon Fiber"
 snape_wand.describe_wand()
