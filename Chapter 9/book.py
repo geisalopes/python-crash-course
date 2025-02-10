@@ -7,7 +7,7 @@ class Book:
         self.pages = pages
 
     def describe_book(self):
-        """This method shows informations about the book"""
+        """This method shows information about the book"""
         print(f"Here is the information about your book:")
         print(f" Title: {self.title}")
         print(f" Author: {self.author}")

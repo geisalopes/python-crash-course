@@ -1,22 +1,22 @@
 class Wizard:
-    """A simple class to represent a wizar."""
+    """A simple class to represent a wizard."""
 
     def __init__(self, name, level=10):
         self.name = name
         self.level = level
 
     def describe_wizard(self):
-        """Show iformations about the wizard"""
-        print("Here is the information about th wizard:")
+        """Show information about the wizard."""
+        print("Here is the information about the wizard:")
         print(f"Name: {self.name}")
         print(f"Level: {self.level}\n")
 
     def level_up(self, new_level):
-        """Increase the wizard's level"""
+        """Update the wizard's level to a new value."""
         self.level = new_level
 
 
-# Creating a object to represent a wizard
+# Creating an object to represent a wizard
 merlin = Wizard("Merlin", 50)
 
 # Describing the wizard before changing his level
