@@ -1,21 +1,41 @@
-class Movie:
-"""Represents a movie."""
+class Author:
+    """A simple Author for a book"""
 
-    def __init__(self, title, year):
-        self.title = title
-        self.year = year
-
-    def describe_movir (self):
-        print(f"My favorite actor are {self.title}, released in {self.year}.")
-
-class Actor:
-    def __init__(self, name, movies):
+    def __init__(self, name, birth_year):
         self.name = name
-        self.movies = movies
+        self.birth_year = birth_year
 
-    def list_movies(self):
-        print(f"{self.name} made the following movies: {self.movies}")
+    def describe_author(self):
+        """Display a message about the author"""
+        print(f"The author of this book is {self.name}, born in {self.birth_year}.")
+
+    def get_age(self, current_year):
+        """Display the author's age based on the current year."""
+        age = current_year - self.birth_year
+        print(f"{self.name} would be approximately {age} years old today.")
 
 
-my_movie = Movie("Love Actually, 2005")
-my_actor = Actor("Alan, Rickman,")
+class Book:
+    """Represents specific aspects of a book."""
+
+    def __init__(self, title, genre, publication_year):
+        """Initialize the books' attributes."""
+        self.title = title
+        self.genre = genre
+        self.publication_year = publication_year
+        self.author = Author("Machado de Assis", 1839)
+
+    def describe_book(self):
+        """Display information about a book."""
+        print(
+            f"{self.title}, a book of the genre {self.genre}, published in {self.publication_year}."
+        )
+
+
+my_book = Book("Dom Casmurro", "Novel", 1899)
+
+my_book.describe_book()
+
+my_book.author.describe_author()
+
+my_book.author.get_age(2025)
