@@ -23,7 +23,7 @@ class Book:
         self.title = title
         self.genre = genre
         self.publication_year = publication_year
-        self.author = Author("Machado de Assis", 1839)
+        self.author = None
 
     def describe_book(self):
         """Display information about a book."""
@@ -32,10 +32,18 @@ class Book:
         )
 
 
+machado_de_assis = Author("Machado de Assis", 1839)
 my_book = Book("Dom Casmurro", "Novel", 1899)
+my_book.author = machado_de_assis
 
 my_book.describe_book()
-
 my_book.author.describe_author()
-
 my_book.author.get_age(2025)
+
+tolkien = Author("Tolkien", 1920)
+my_book2 = Book("Senhor dos Aneis", "Fantasy", 1980)
+my_book2.author = tolkien
+
+my_book2.describe_book()
+my_book2.author.describe_author()
+my_book2.author.get_age(2025)
