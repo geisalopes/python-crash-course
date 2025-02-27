@@ -1,0 +1,3 @@
+Em Python você pode criar funções.
+Em Python você pode trabalhar com listas.
+Em Python você pode manipular arquivos.
