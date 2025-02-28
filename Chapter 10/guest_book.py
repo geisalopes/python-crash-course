@@ -2,8 +2,8 @@ from pathlib import Path
 
 path = Path("Chapter 10/guest_book.txt")
 
-prompt = "\nHi, what's your name?"
-prompt += "\nEnter 'quit' if you are the last guest."
+prompt = "\nHi, what's your name? "
+prompt += "\nEnter 'quit' if you're the last guest. "
 
 guest_names = []
 while True:
@@ -12,6 +12,7 @@ while True:
         break
 
     print(f"Thanks {name}, we'll add you to the guest book.")
+    guest_names.append(name)
 
 # Build a string where "\n" is added after each name.
 file_string = ""
