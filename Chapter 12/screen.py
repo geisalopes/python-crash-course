@@ -1,5 +1,5 @@
 class Screen:
-    """A class to store all settings for Alien Invasion."""
+    """A class to store all settings for Rocket Game."""
 
     def __init__(self):
         """Initialize the game's settings."""
