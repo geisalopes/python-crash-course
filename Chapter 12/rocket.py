@@ -22,7 +22,7 @@ class Rocket:
         self.screen_rect = self.screen.get_rect()
 
         # Começa o foguete no centro inferior da tela
-        self.rect.midbottom = self.screen_rect.midbottom
+        self.rect.midleft = self.screen_rect.midleft
 
     def blitme(self):
         """Desenha o foguete na tela na posição atual."""
@@ -30,10 +30,6 @@ class Rocket:
 
     def update(self):
         """Atualiza a posição do foguete se estiver se movendo para a direita."""
-        if self.moving_right and self.rect.right < self.screen_rect.right:
-            self.rect.x += 10
-        if self.moving_left and self.rect.left > 0:
-            self.rect.x -= 10
         if self.moving_up and self.rect.top > 0:
             self.rect.y -= 10
         if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
